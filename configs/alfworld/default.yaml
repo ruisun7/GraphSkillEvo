@@ -1,0 +1,21 @@
+_base_: ../_base_/default.yaml
+
+train:
+  train_size: 0
+  accumulation: 1
+
+evaluation:
+  test_env_num: 0
+
+env:
+  name: alfworld
+  skill_init: graphskillevo/initial_skills/alfworld/init_skill.md
+  split_mode: split_dir
+  split_dir: data/alfworld_path_split
+  data_path: ""
+  split_output_dir: ""
+  max_steps: 50
+  max_completion_tokens: 16384
+  workers: 8
+  max_api_workers: 8
+  limit: 0

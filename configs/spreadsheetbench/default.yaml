@@ -1,0 +1,26 @@
+_base_: ../_base_/default.yaml
+
+model:
+  reasoning_effort: medium
+
+train:
+  train_size: 80
+  batch_size: 40
+  accumulation: 1
+
+evaluation:
+  test_env_num: 0
+
+env:
+  name: spreadsheetbench
+  skill_init: graphskillevo/initial_skills/spreadsheetbench/init_skill.md
+  split_mode: split_dir
+  split_dir: data/spreadsheetbench_split
+  data_path: ""
+  split_output_dir: ""
+  data_root: data/spreadsheetbench_verified_400
+  mode: multi
+  max_turns: 30
+  max_completion_tokens: 16384
+  exec_timeout: 600
+  workers: 8

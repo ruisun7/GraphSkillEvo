@@ -1,0 +1,24 @@
+_base_: ../_base_/default.yaml
+
+model:
+  reasoning_effort: medium
+
+train:
+  train_size: 400
+  batch_size: 40
+  accumulation: 1
+
+evaluation:
+  test_env_num: 0
+
+env:
+  name: searchqa
+  skill_init: graphskillevo/initial_skills/searchqa/init_skill.md
+  split_mode: split_dir
+  split_dir: data/searchqa_split
+  data_path: ""
+  split_output_dir: ""
+  max_turns: 1
+  max_completion_tokens: 16384
+  workers: 24
+  limit: 0

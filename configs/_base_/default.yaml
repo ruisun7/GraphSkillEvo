@@ -1,0 +1,65 @@
+# GraphSkillEvo default configuration — base for all environments.
+# Environment configs should inherit via: _base_: default.yaml
+
+model:
+  backend: azure_openai
+  optimizer: gpt-5.4-nano
+  target: gpt-5.4-nano
+  optimizer_backend: openai_chat
+  target_backend: openai_chat
+  reasoning_effort: medium
+  codex_exec_path: codex
+  codex_exec_sandbox: workspace-write
+  codex_exec_profile: ""
+  codex_exec_full_auto: false
+  codex_exec_reasoning_effort: none
+  codex_exec_use_sdk: auto
+  codex_exec_network_access: false
+  codex_exec_web_search: false
+  codex_exec_approval_policy: never
+  codex_trace_to_optimizer: true
+  azure_openai_endpoint: ""           # e.g. "https://your-resource.openai.azure.com/"
+  azure_openai_api_version: "2024-12-01-preview"
+  azure_openai_api_key: ""       # Fill locally if you do not export AZURE_OPENAI_API_KEY
+  azure_openai_auth_mode: ""           # empty → fall back to AZURE_OPENAI_AUTH_MODE env (default "azure_cli")
+  azure_openai_ad_scope: "https://cognitiveservices.azure.com/.default"
+  azure_openai_managed_identity_client_id: ""
+  optimizer_azure_openai_endpoint: ""   # e.g. "https://your-resource.openai.azure.com/"
+  optimizer_azure_openai_api_version: "2024-12-01-preview"
+  optimizer_azure_openai_api_key: ""
+  optimizer_azure_openai_auth_mode: ""           # empty → fall back to OPTIMIZER_AZURE_OPENAI_AUTH_MODE env, then shared
+  optimizer_azure_openai_ad_scope: "https://cognitiveservices.azure.com/.default"
+  optimizer_azure_openai_managed_identity_client_id: ""
+  target_azure_openai_endpoint: ""   # e.g. "https://your-resource.openai.azure.com/"
+  target_azure_openai_api_version: "2024-12-01-preview"
+  target_azure_openai_api_key: ""
+  target_azure_openai_auth_mode: ""           # empty → fall back to TARGET_AZURE_OPENAI_AUTH_MODE env, then shared
+  target_azure_openai_ad_scope: "https://cognitiveservices.azure.com/.default"
+  target_azure_openai_managed_identity_client_id: ""
+
+train:
+  num_epochs: 4
+  train_size: 0          # 0 = derive from dataset split when available
+  batch_size: 40
+  accumulation: 1
+  seed: 42
+
+evaluation:
+  test_env_num: 0
+
+graphskillevo:
+  population_size: 4
+  generations: 5
+  train_eval_num: 15
+  reflection_failure_k: 5
+
+env:
+  name: ""
+  skill_init: ""
+  split_mode: ratio       # ratio = build deterministic split from data_path; split_dir = use pre-split train/val/test
+  split_seed: 42
+  split_dir: ""
+  data_path: ""
+  split_output_dir: ""
+  exec_timeout: 120      # per target model/code-agent call timeout in seconds
+  out_root: ""
