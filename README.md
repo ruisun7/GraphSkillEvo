@@ -1,6 +1,6 @@
 # GraphSkillEvo
 
-Code for the paper **GRAPHSKILLEVO: EVOLUTIONARY OPTIMIZATION OF GRAPH-STRUCTURED AGENT SKILLS** [Arxiv](https://arxiv.org/abs/2609.21749).
+Code for the paper  [**GRAPHSKILLEVO: EVOLUTIONARY OPTIMIZATION OF GRAPH-STRUCTURED AGENT SKILLS**](https://arxiv.org/abs/2609.21749).
 
 ## Install
 
