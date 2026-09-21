@@ -186,5 +186,13 @@ If you use this code or the released skill artifacts, please cite the
 corresponding paper:
 
 ```bibtex
-@misc
+@misc{sun2026graphskillevoevolutionaryoptimizationgraphstructured,
+      title={GraphSkillEvo: Evolutionary Optimization of Graph-Structured Agent Skills}, 
+      author={Rui Sun and Zhi Zheng and Zhenkun Wang and Zhichao Lu},
+      year={2026},
+      eprint={2609.21749},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2609.21749}, 
+}
 ```
