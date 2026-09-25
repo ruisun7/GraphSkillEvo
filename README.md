@@ -1,6 +1,6 @@
 # GraphSkillEvo
 
-Code for the paper  [**GRAPHSKILLEVO: EVOLUTIONARY OPTIMIZATION OF GRAPH-STRUCTURED AGENT SKILLS**](https://arxiv.org/abs/2609.21749).
+Code for the anonymous submission **GRAPHSKILLEVO: EVOLUTIONARY OPTIMIZATION OF GRAPH-STRUCTURED AGENT SKILLS**.
 
 ## Install
 
@@ -182,17 +182,4 @@ ckpt/gpt-5.4-nano/
 ```
 ## Citation
 
-If you use this code or the released skill artifacts, please cite the
-corresponding paper:
-
-```bibtex
-@misc{sun2026graphskillevoevolutionaryoptimizationgraphstructured,
-      title={GraphSkillEvo: Evolutionary Optimization of Graph-Structured Agent Skills}, 
-      author={Rui Sun and Zhi Zheng and Zhenkun Wang and Zhichao Lu},
-      year={2026},
-      eprint={2609.21749},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2609.21749}, 
-}
-```
+Citation information is omitted during anonymous review.

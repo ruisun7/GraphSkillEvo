@@ -1,5 +1,6 @@
 .DS_Store
-.idea/
-.DS_Store
 __pycache__/
-outputs
+*.py[cod]
+.idea/
+.venv/
+outputs/
